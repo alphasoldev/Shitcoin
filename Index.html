@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SHITCOIN - The Ultimate Meme Coin</title>
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --accent: #FFD700;
+            --background: #FFF8DC;
+            --text: #3E2723;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: var(--primary);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 24px;
+            margin-top: 10px;
+            color: white;
+        }
+        
+        .rain-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB, var(--background));
+        }
+        
+        .poop {
+            position: absolute;
+            color: var(--secondary);
+            font-size: 24px;
+            animation: fall linear forwards;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(400px);
+            }
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            width: 30%;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .tokenomics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .tokenomics-item {
+            width: 45%;
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            font-size: 30px;
+            margin: 0 15px;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--accent);
+            transform: scale(1.2);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .roadmap {
+            margin-top: 40px;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        
+        .roadmap-phase {
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 20px;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .roadmap-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .feature, .tokenomics-item {
+                width: 90%;
+            }
+            
+            .roadmap-item {
+                flex-direction: column;
+            }
+            
+            .roadmap-phase {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">$SHITCOIN</div>
+        <div class="tagline">The #1 Scatological Token in Crypto</div>
+    </header>
+    
+    <div class="rain-container" id="rain-container">
+        <!-- Poop emojis will be added here by JavaScript -->
+    </div>
+    
+    <div class="cta-section">
+        <a href="#buyNow" class="cta-button">BUY $SHITCOIN</a>
+        <a href="#community" class="cta-button">JOIN COMMUNITY</a>
+    </div>
+    
+    <section id="about">
+        <h2>About $SHITCOIN</h2>
+        <p>Welcome to $SHITCOIN - the internet's most outrageous memecoin! We're flushing traditional finance down the toilet and bringing you a token that's both hilarious and potentially profitable.</p>
+        <p>$SHITCOIN isn't just another crypto project - it's a movement, a community, and the most entertaining way to be part of the crypto revolution. Join us as we make a splash in the DeFi space!</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>PumpFun Technology</h3>
+                <p>Our proprietary PumpFun mechanism ensures liquidity and trading volume, keeping the excitement flowing within our ecosystem.</p>
+            </div>
+            <div class="feature">
+                <h3>Scato Design</h3>
+                <p>Unique scatological aesthetics and branding that stands out in the crowded memecoin market. We don't just follow trends - we create them!</p>
+            </div>
+            <div class="feature">
+                <h3>Community Driven</h3>
+                <p>$SHITCOIN is powered by our passionate community. Together, we're building the most entertaining token in the crypto space.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <div class="tokenomics">
+            <div class="tokenomics-item">
+                <h3>Token Distribution</h3>
+                <p>- 100% Public Sale</p>
+            </div>
+            <div class="tokenomics-item">
+                <h3>Unique Features</h3>
+                <p>- 2% Reflection to Holders</p>
+                <p>- 3% Added to Liquidity</p>
+                <p>- Burn Mechanism on Major Milestones</p>
+                <p>- Anti-Whale Measures</p>
+                <p>- Community Governance</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 1</div>
+                <div class="roadmap-content">
+                    <h3>Launch & Initial Growth</h3>
+                    <p>- Token Launch</p>
+                    <p>- Website Release</p>
+                    <p>- Social Media Setup</p>
+                    <p>- Community Building</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 2</div>
+                <div class="roadmap-content">
+                    <h3>Expansion</h3>
+                    <p>- Major Exchange Listings</p>
+                    <p>- Marketing Campaigns</p>
+                    <p>- Partnerships with Influencers</p>
+                    <p>- Community Growth Initiatives</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 3</div>
+                <div class="roadmap-content">
+                    <h3>Utility Development</h3>
+                    <p>- NFT Collection Launch</p>
+                    <p>- Mobile Game Development</p>
+                    <p>- Merchandise Store</p>
+                    <p>- Charity Initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="community">
+        <h2>Join Our Community</h2>
+        <p>Be part of the $SHITCOIN revolution! Follow us on social media and join our community for updates, memes, and opportunities to earn rewards.</p>
+        
+        <div class="social-links">
+            <a href="https://twitter.com" class="social-link" target="_blank">𝕏</a>
+            <a href="https://www.tiktok.com/@poopingwithu?_t=ZN-8wXT6DoNIX8&_r=1" class="social-link" target="_blank">TikTok</a>
+            <a href="https://t.me" class="social-link" target="_blank">Telegram</a>
+            <a href="https://discord.com" class="social-link" target="_blank">Discord</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 $SHITCOIN. All Rights Reserved.</p>
+        <p>Disclaimer: This is a meme coin. Please invest responsibly and do your own research.</p>
+    </footer>
+
+    <script>
+        // Create raining poop effect
+        const rainContainer = document.getElementById('rain-container');
+        const containerWidth = rainContainer.offsetWidth;
+        const containerHeight = rainContainer.offsetHeight;
+        
+        function createPoop() {
+            const poop = document.createElement('div');
+            poop.classList.add('poop');
+            poop.innerHTML = '💩';
+            
+            // Random position
+            const posX = Math.random() * containerWidth;
+            poop.style.left = `${posX}px`;
+            poop.style.top = '-50px';
+            
+            // Random size
+            const size = Math.random() * 30 + 20;
+            poop.style.fontSize = `${size}px`;
+            
+            // Random duration
+            const duration = Math.random() * 2 + 2;
+            poop.style.animationDuration = `${duration}s`;
+            
+            rainContainer.appendChild(poop);
+            
+            // Remove after animation completes
+            setTimeout(() => {
+                poop.remove();
+            }, duration * 1000);
+        }
+        
+        // Create poops at interval
+        setInterval(createPoop, 200);
+        
+        // Initial batch
+        for (let i = 0; i < 20; i++) {
+            setTimeout(createPoop, Math.random() * 2000);
+        }
+    </script>
+</body>
+</html>
